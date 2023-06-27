@@ -21,7 +21,7 @@ class AuthTest {
     }
 
     @Test
-    void SuccessfulRegistered() {
+    void successfulRegistered() {
         var registeredUser = getRegisteredUser("active");
         $("[data-test-id=login] input").setValue(registeredUser.getLogin());
         $("[data-test-id=password] input").setValue(registeredUser.getPassword());
@@ -50,7 +50,7 @@ class AuthTest {
     }
 
     @Test
-    void WrongLogin() {
+    void wrongLogin() {
         var registeredUser = getRegisteredUser("active");
         var wrongLogin = login();
         $("[data-test-id=login] input").setValue(wrongLogin);
@@ -61,7 +61,7 @@ class AuthTest {
     }
 
     @Test
-    void WrongPassword() {
+    void wrongPassword() {
         var registeredUser = getRegisteredUser("active");
         var wrongPassword = password();
         $("[data-test-id=login] input").setValue(registeredUser.getLogin());
